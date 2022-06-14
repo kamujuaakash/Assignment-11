@@ -1,0 +1,62 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+% \usetheme{Frankfurt}
+% \usetheme{Darmstadt}
+% \usetheme{Berlin}
+% \usetheme{Warsaw}
+% \usetheme{Berkeley}
+% \usetheme{Bergen}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\mysolution}{\noindent \textbf{Solution: }}
+
+\title{AI1110 - Probability and Random Variables\\
+        Assignment 11}
+\author{Aakash Kamuju (ai21btech11001)}
+\begin{document}
+\maketitle
+    % \begin{frame}{Table of Contents}
+    % \tableofcontents
+    % \end{frame}
+    \begin{frame}{Outline}
+    \tableofcontents
+    \end{frame}
+    \begin{frame}{Question}
+        \begin{section}{Question}
+            \begin{block}{Exercise 11.6}
+  Show that if x(t) is a WSS process and\\
+  $$s = \frac{1}{n} \sum\limits_{k = 1} ^{n} x(kT)$$ then\\ $$E\cbrak{s^2} = \frac{1}{2 \pi n^2}  \int_{-\infty}^{\infty} S_x(w) \frac{\sin ^2 {n \omega T/2}} {\sin ^2 {\omega T/2}} \,d\omega  $$
+
+   \end{block}
+    \end{section}
+    \end{frame}
+    \begin{frame}{Solution}
+        \begin{section}{Solution}
+            \begin{block}{Solution}
+            The process \\
+             $$y[n] = \frac{1}{n} \sum\limits_{k = 1} ^{n} x(nT + kT)$$is the output of a system with input x[n] and system function
+             $$H(z) = \frac{1}{n} \sum\limits_{k = 1}^n z^k$$
+        \end{block}
+       \end{section}
+  \end{frame}
+  \begin{frame}
+        \begin{section}{Solution Continued}
+            \begin{block}{Solution Continued}
+           Furthermore, s = y[0] and \\
+           $$n^2 \left|H(e^{j \omega T})\right|^2 = \left| \sum\limits_{k = 1}^n (e^{j \omega T}) \right| ^2 $$ $$ = \left| \frac{e^{j \omega T} - e^{j(n + 1) \omega T}} {1 - e^{j \omega T}} \right| $$
+           $$=\frac{\sin ^2 {n \omega T/2}} {\sin ^2 {\omega T/2}}  $$
+        \end{block}
+       \end{section}
+  \end{frame}
+  \begin{frame}
+        \begin{section}{Solution Continued}
+            \begin{block}{Solution Continued}
+           Hence,\\
+           $$E\cbrak{s^2} = R_{[y]}=  \frac{1}{2 \pi n^2}  \int_{-\infty}^{\infty} S_x(w) \frac{\sin ^2 {n \omega T/2}} {\sin ^2 {\omega T/2}} \,d\omega  $$
+        \end{block}
+       \end{section}
+  \end{frame}
+   \end{document}
